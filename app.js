@@ -27,11 +27,7 @@ app.get("/books", (req, res, next) => {
       return;
     }
     const booksData = JSON.parse(data);
-    const books = [];
-    for (const book of booksData.books) {
-      books.push(book);
-    }
-    res.render("books", { books });
+    res.render("books", { booksData });
   });
 });
 
